@@ -8,11 +8,13 @@ parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
 if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
 from custom_assertions import *
+
 # формула сложных процентов: S = P * (1+r)^n
 # S - Значение к концу срока
 # p - Начальный вклад
 # r - Ставка за период(год)
 # n - количество периодов(годы)
+
 P = UserInput('Введите ваш начальный вклад: ', int)
 r = UserInput('Введите вашу процентную ставку: ', int) / 100
 S = P
