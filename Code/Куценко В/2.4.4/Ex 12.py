@@ -1,17 +1,10 @@
 print('''Эта программа считает количество знакопеременных пар
 ''')
-import sys
-import os
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-if parent_dir not in sys.path:
-    sys.path.insert(0, parent_dir)
-from custom_assertions import *
-
-Size = UserInput('Размер массива: ', int)
-Array = CreateRandomList(Size, [-2, 2], int)
+import random as r
+Size = int(input('Введите размер массива: '))
+Array = [r.randint(-2, 2) for w in range(Size)]
 count = 0
-for w in range(len(Array)-1):
+for w in range(Size-1):
     Expression1 = (Array[w]>0 and Array[w+1]<0) #+ -
     Expression2 = (Array[w]<0 and Array[w+1]>0) #- +
     if Expression1 or Expression2:
