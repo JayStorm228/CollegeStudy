@@ -3,15 +3,12 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../Mods')))
 from custom_assertions import *
 print('''
-Этп программа вычисляет максимальное и минимальное значение массива из 10 элементов
+Этп программа вычисляет максимальное и минимальное значение среди нечётных элементов массива из 10 элементов
 ''')
 
 Tuple = []
 output = []
-while True:
-    if len(Tuple) == 10:
-        break
-
+while len(Tuple) != 10:
     Tuple.append(UserInput('Введите число: ', int))
 Tuple = tuple(Tuple)
 

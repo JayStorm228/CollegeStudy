@@ -9,6 +9,7 @@ print('''
 
 число С вводится с клавиатуры
 ''')
+
 C = UserInput('Введите число С: ', float)
 InputTuple = tuple(CreateList(UserInput('Введите размер массива: ', int), int))
 output = []
@@ -16,16 +17,15 @@ output = []
 for w in InputTuple:
     if abs(w) > C:
         output.append(w)
-try:
-    sum(output)/len(output)
-except ZeroDivisionError:
+
+if len(output) < 0:
     print(f'''
 Введённые значения: {', '.join(map(str, InputTuple))}
 Среди них удовлетворяют условию: 0
 ''')
-    exit()
-          
-print(f'''
+    
+else:       
+    print(f'''
 Удовлетворительные значения: {', '.join(map(str, output))}
 Их среднее значение: {sum(output)/len(output)}
 ''')

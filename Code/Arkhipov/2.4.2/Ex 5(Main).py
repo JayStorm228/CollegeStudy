@@ -4,12 +4,13 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../M
 from custom_assertions import *
 
 print('''
-Эта программа видоизменяет массив заданного размера по критериям:
+Эта программа видоизменяет массив случайных значений заданного размера по критериям:
 
 Если элемент положительный, он уменьшится в два раза
 Если элемент отрицательный, он заменится порядковым номером элемента
 ''')
-Data = CreateList(UserInput('Введите размер массива: ', int), int)
+Size = UserInput('Введите размер массива: ', int)
+Data = CreateRandomList(Size,[-10, 10], int)
 
 
 print(f'Исходный список: {Data}')
