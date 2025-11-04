@@ -86,7 +86,5 @@ def CreateRandomList(size:int, Bounds:list, Type): # Список случайн
     else: raise TypeError(f'''<{type}> is an invalid type.
                           Supported types: float, int''')
 
-
-
 if __name__ == '__main__':
     print(UserInput('test', float))
