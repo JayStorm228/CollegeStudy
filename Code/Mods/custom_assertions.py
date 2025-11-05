@@ -1,4 +1,5 @@
-import random as r #Last Update: 19.10.25
+import random as r
+#Last Update: 05.11.25
 class SizeError(Exception):
     def __init__(self, size):
         self.size = size
@@ -83,8 +84,32 @@ def CreateRandomList(size:int, Bounds:list, Type): # Список случайн
             output.append(r.uniform(Bounds[0], Bounds[1]))
         return output
     
-    else: raise TypeError(f'''<{type}> is an invalid type.
+    else: raise TypeError(f'''<{Type}> is an invalid type.
                           Supported types: float, int''')
 
+def pprint(Matrix:list):
+    for i in range(len(Matrix)): #Cтрока
+        print('[',end='')
+        for j in range(len(Matrix[i])): #Столбец
+            print(Matrix[i][j],',', end=' ')
+        print('],')
+
+def GenerateMatrix(Rows:int, Columns:int, Bounds:list): #
+    if type(Rows) != int:
+        raise TypeError(f'''Type of <{Rows}> is invalid: {type(Rows)}
+                        Expected integer object''')
+    if type(Columns) != int:
+        raise TypeError(f'''Type of <{Columns}> is invalid: {type(Columns)}
+                        Expected integer object''')
+    if type(Bounds) != list:
+        raise TypeError(f'''Type of <{Bounds}> is invalid: {type(Bounds)}
+                        Expected list object with 2 elements''')
+    elif len(Bounds) != 2:
+        raise SizeError(2)
+    
+    return [[j for j in r.sample(range(Bounds[0],Bounds[1]), Columns)] 
+            for j in r.sample(range(Bounds[0],Bounds[1]), Rows)]
+
 if __name__ == '__main__':
-    print(UserInput('test', float))
+    Matrix = GenerateMatrix(5,5, [-10, 10])
+    pprint(Matrix)
