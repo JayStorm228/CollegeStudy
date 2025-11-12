@@ -1,34 +1,26 @@
-print('''Эта программа подсчитывает среднюю длинну слов во введённой строке
-''')
+print(
+    """Эта программа подсчитывает среднюю длину слов во введённой строке
+"""
+)
+import sys
+import os
+import string as s
 
-string = input('Введите строку: ')
-StrList = string.split(' ')
-StrList2 = []
-Symbols = ['-', '--']
-Len = []
-for i in range(len(StrList)):
-    StrList[i] = StrList[i].strip(',')
-    StrList[i] = StrList[i].strip('/')
-    StrList[i] = StrList[i].strip('.')
-    StrList[i] = StrList[i].strip(':')
-    StrList[i] = StrList[i].strip(';')
-    StrList[i] = StrList[i].strip('"')
-    StrList[i] = StrList[i].strip("'")
-    StrList[i] = StrList[i].strip(")")
-    StrList[i] = StrList[i].strip("(")
-    StrList[i] = StrList[i].strip("]")
-    StrList[i] = StrList[i].strip("[")
+# всё что идёт для принта - для импорта модуля)
+current_file = os.path.abspath(__file__)
+repo_root = os.path.abspath(os.path.join(current_file, "..", "..", ".."))
+mods_path = os.path.join(repo_root, "Mods")
+if mods_path not in sys.path:
+    sys.path.insert(0, mods_path)
+try:
+    from custom_assertions import *
+except ImportError as e:
+    print(f"Модуль custom_assertions не найден: {e}")
+    exit()
+string = input("Введите строку: ").translate(str.maketrans("", "", s.punctuation))
+StrList = string.split(" ")
+Counter = StrList.count("")
+for w in range(Counter):
+    StrList.remove("")
 
-
-
-for w in StrList:
-    if w not in Symbols:
-        StrList2.append(w)
-for w in StrList2:
-    Len.append(len(w))
-Avg = sum(Len)/len(Len)
-print(f'''Введённая строка: {string}
-Слова в ней: {', '.join(map(str, StrList2))}
-Их средняя длинна: {Avg}
-''')
-input('\nНажмите ENTER, чтобы выйти.')
+print(StrList)

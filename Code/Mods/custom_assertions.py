@@ -1,115 +1,157 @@
 import random as r
-#Last Update: 05.11.25
+import string as s
+
+
+# Last Update: 05.11.25
 class SizeError(Exception):
     def __init__(self, size):
         self.size = size
-        self.message = f'Wrong size of Argument! Expected list with {self.size} values!'
+        self.message = f"Wrong size of Argument! Expected list with {self.size} values!"
         super().__init__(self.message)
-        
-def UserInput(text:str, DATAtype):
+
+
+def UserInput(text: str, DATAtype):
     variable = None
-    if DATAtype == float: #Принимаем на ввод дробные числа
+    if DATAtype == float:  # Принимаем на ввод дробные числа
         while variable == None:
             variable = input(text)
             try:
                 variable = float(variable)
 
             except ValueError:
-                print(f'\'{variable}\' не является корректным значением. Если вы вводите дробное значеине, вводите его через точку(Пр.: 4.5)')
+                print(
+                    f"'{variable}' не является корректным значением. Если вы вводите дробное значеине, вводите его через точку(Пр.: 4.5)"
+                )
                 variable = None
                 continue
         return variable
 
-    elif DATAtype == int: # Получим целое число
+    elif DATAtype == int:  # Получим целое число
         while True:
             variable = input(text)
-            if '.' in variable:
-                print('''                    
+            if "." in variable:
+                print(
+                    """                    
 Вы ввели дробное значение.
 Пожалуйста, введите целое значение.     
-''')
+"""
+                )
                 variable = None
             else:
-                try: 
+                try:
                     variable = int(variable)
                 except ValueError:
-                    print(f'\'{variable}\' не является корректным значением.')
+                    print(f"'{variable}' не является корректным значением.")
                     variable = None
             if variable != None:
                 break
-        return variable     
+        return variable
 
-    elif DATAtype == str: # Полчить строковое значение
+    elif DATAtype == str:  # Полчить строковое значение
         variable = input(text)
         return variable
-    
-    else:   raise TypeError(f'''{DATAtype} is wrong type of value!
-                            Allowed types: str, int, float''')
-		
-def CreateList(size, Type): #Генератор списков с целыми/дробными значениями с клавиатуры
-    if type(size) != int: 
-        raise TypeError(f'''<{size}> is invalid argument!
-                        Size must be an integer value!''')
-    if type(Type) == int or type(Type) == float: 
-        raise TypeError(f'''<{Type}> is invalid type!
-                        Supported types: int, float''')
-    
-    print('На основе введённых чисел будет создан список.\nНажмите  Еnter, чтобы закончить ввод')
+
+    else:
+        raise TypeError(
+            f"""{DATAtype} is wrong type of value!
+                            Allowed types: str, int, float"""
+        )
+
+
+def CreateList(
+    size, Type
+):  # Генератор списков с целыми/дробными значениями с клавиатуры
+    if type(size) != int:
+        raise TypeError(
+            f"""<{size}> is invalid argument!
+                        Size must be an integer value!"""
+        )
+    if type(Type) == int or type(Type) == float:
+        raise TypeError(
+            f"""<{Type}> is invalid type!
+                        Supported types: int, float"""
+        )
+
+    print(
+        "На основе введённых чисел будет создан список.\nНажмите  Еnter, чтобы закончить ввод"
+    )
 
     output = []
     counter = 1
     while len(output) != size:
-        output.append(UserInput(f'Введите число {counter}: ', Type))
+        output.append(UserInput(f"Введите число {counter}: ", Type))
         counter += 1
     return output
 
-def CreateRandomList(size:int, Bounds:list, Type): # Список случайных значений
+
+def CreateRandomList(size: int, Bounds: list, Type):  # Список случайных значений
     output = []
     if type(size) != int:
-        raise TypeError(f'Expected int type, not {type(size)} type!')
+        raise TypeError(f"Expected int type, not {type(size)} type!")
     if type(Bounds) != list:
-        raise TypeError(f'Expected list type, not {type(Bounds)} type!')
+        raise TypeError(f"Expected list type, not {type(Bounds)} type!")
     if len(Bounds) != 2:
         raise SizeError(2)
     if Bounds[0] > Bounds[1]:
-        raise ValueError(f'Bounds[0]={Bounds[0]} value must be bigger than Bounds[1]={Bounds[1]} value! ')
+        raise ValueError(
+            f"Bounds[0]={Bounds[0]} value must be bigger than Bounds[1]={Bounds[1]} value! "
+        )
 
-    if Type == int: # Случайные Целые значения
+    if Type == int:  # Случайные Целые значения
         for w in range(size):
             output.append(r.randint(Bounds[0], Bounds[1]))
         return output
-    
-    elif Type == float: # Случайные Дробные значения
+
+    elif Type == float:  # Случайные Дробные значения
         for w in range(size):
             output.append(r.uniform(Bounds[0], Bounds[1]))
         return output
-    
-    else: raise TypeError(f'''<{Type}> is an invalid type.
-                          Supported types: float, int''')
 
-def pprint(Matrix:list):
-    for i in range(len(Matrix)): #Cтрока
-        print('[',end='')
-        for j in range(len(Matrix[i])): #Столбец
-            print(Matrix[i][j],',', end=' ')
-        print('],')
+    else:
+        raise TypeError(
+            f"""<{Type}> is an invalid type.
+                          Supported types: float, int"""
+        )
 
-def GenerateMatrix(Rows:int, Columns:int, Bounds:list): #
+
+def pprint(Matrix: list):
+    for i in range(len(Matrix)):  # Cтрока
+        print("[", end="")
+        for j in range(len(Matrix[i])):  # Столбец
+            print(Matrix[i][j], ",", end=" ")
+        print("],")
+
+
+def GenerateMatrix(Rows: int, Columns: int, Bounds: list):  #
     if type(Rows) != int:
-        raise TypeError(f'''Type of <{Rows}> is invalid: {type(Rows)}
-                        Expected integer object''')
+        raise TypeError(
+            f"""Type of <{Rows}> is invalid: {type(Rows)}
+                        Expected integer object"""
+        )
     if type(Columns) != int:
-        raise TypeError(f'''Type of <{Columns}> is invalid: {type(Columns)}
-                        Expected integer object''')
+        raise TypeError(
+            f"""Type of <{Columns}> is invalid: {type(Columns)}
+                        Expected integer object"""
+        )
     if type(Bounds) != list:
-        raise TypeError(f'''Type of <{Bounds}> is invalid: {type(Bounds)}
-                        Expected list object with 2 elements''')
+        raise TypeError(
+            f"""Type of <{Bounds}> is invalid: {type(Bounds)}
+                        Expected list object with 2 elements"""
+        )
     elif len(Bounds) != 2:
         raise SizeError(2)
-    
-    return [[j for j in r.sample(range(Bounds[0],Bounds[1]), Columns)] 
-            for j in r.sample(range(Bounds[0],Bounds[1]), Rows)]
 
-if __name__ == '__main__':
-    Matrix = GenerateMatrix(5,5, [-10, 10])
+    return [
+        [j for j in r.sample(range(Bounds[0], Bounds[1]), Columns)]
+        for j in r.sample(range(Bounds[0], Bounds[1]), Rows)
+    ]
+
+
+def RemovePunctuation(String: str, dict=s.punctuation):
+    String = String.translate(str.maketrans("", "", dict))
+    return String
+
+
+if __name__ == "__main__":
+    Matrix = GenerateMatrix(5, 5, [-10, 10])
     pprint(Matrix)
