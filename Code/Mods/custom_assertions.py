@@ -2,7 +2,7 @@ import random as r
 import string as s
 
 
-# Last Update: 05.11.25
+# Last Update: 11.11.25
 class SizeError(Exception):
     def __init__(self, size):
         self.size = size
