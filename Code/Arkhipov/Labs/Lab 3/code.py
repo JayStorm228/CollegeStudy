@@ -1,12 +1,9 @@
-# x < 1,3
-# x = 1,3
-# x > 1,3
-
 import sys
 import os
+
 # всё что идёт для принта - для импорта модуля)
 current_file = os.path.abspath(__file__)
-repo_root = os.path.abspath(os.path.join(current_file, "..", "..", ".."))
+repo_root = os.path.abspath(os.path.join(current_file, "..", "..", "..", ".."))
 mods_path = os.path.join(repo_root, "Mods")
 if mods_path not in sys.path:
     sys.path.insert(0, mods_path)
@@ -16,18 +13,43 @@ except ImportError as e:
     print(f"Модуль custom_assertions не найден: {e}")
     exit()
 
-print('''Эта программа
-''')
+print(
+    """"Эта программа вычисляет кусочно заданную функцию
+      z = 1 - e^(xy + ab) # xy > 0
+      z = b - min{ax, y} # xy = 0
+      z = max{x^3, e^y, ( |ln y^2| )^( 1/2 )} # xy <0
+"""
+)
 
+import random as r
 import math as m
 
-constant = UserInput('Введите значение а: ', float)
-x = UserInput('Введите значение х: ', float)
+x = r.randint(-10, 10)
+a = r.randint(-10, 10)
+b = r.randint(-10, 10)
+y = r.randint(-10, 10)
+Accuracy = UserInput("Введите количество знаков после запятой: ", int)
 
-if x < 1.3:
-    Fx = m.pi * (x**2) - (7/(x**2))
-elif x ==1.3:
-    Fx = a*(x**3) + 7*(x**(1/2))
-elif  x > 1.3:
-    Fx = m.log(x + 7*(x**(1/2)))
-print(f'f(x) = {Fx}')
+if x * y > 0:
+    Fx = 1 - m.e ** (x * y + a * b)
+    StrFx = "1 - e ^ (xy + ab)  # xy > 0"
+elif x * y == 0:
+    Fx = b - min(a * x, y)
+    StrFx = "z = b - min{ax, y} # xy = 0"
+elif x * y < 0:
+    Fx = max(x**3, m.e**y, abs(m.log(y**2)) ** (1 / 2))
+    StrFx = "max{x^3, e^y, ( |ln y^2| )^( 1/2 )} # xy <0"
+
+print(
+    f"""
+Исходные значения:
+    x = {x}
+    y = {y}
+    a = {a}
+    b = {b}
+Значение функции z при текущих значениях: {round(Fx, Accuracy)}
+Подходящий отрезок кусочно заданной функции: {StrFx}
+Точность вычисления: до {Accuracy} знака
+"""
+)
+input("\nНажмите ENTER, чтобы выйти.")
