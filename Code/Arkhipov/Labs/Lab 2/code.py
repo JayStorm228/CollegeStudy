@@ -27,14 +27,14 @@ print(
 
 import math as m
 
-constant = UserInput("Введите значение а: ", float)
+a = UserInput("Введите значение а: ", float)
 x = UserInput("Введите значение х: ", float)
 
 if x < 1.3:
     Fx = m.pi * (x**2) - (7 / (x**2))
     print(f"f(x) = {Fx}")
 elif x == 1.3:
-    Fx = constant * (x**3) + 7 * (x ** (1 / 2))
+    Fx = a * (x**3) + 7 * (x ** (1 / 2))
     print(f"f(x) = {Fx}")
 elif x > 1.3:
     Fx = m.log(x + 7 * (x ** (1 / 2)))

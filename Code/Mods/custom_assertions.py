@@ -27,7 +27,7 @@ def UserInput(text: str, DATAtype):
         return variable
 
     elif DATAtype == int:  # Получим целое число
-        while True:
+        while variable == None:
             variable = input(text)
             if "." in variable:
                 print(
@@ -43,8 +43,7 @@ def UserInput(text: str, DATAtype):
                 except ValueError:
                     print(f"'{variable}' не является корректным значением.")
                     variable = None
-            if variable != None:
-                break
+
         return variable
 
     elif DATAtype == str:  # Полчить строковое значение
