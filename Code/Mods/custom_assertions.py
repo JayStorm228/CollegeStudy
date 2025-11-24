@@ -71,14 +71,13 @@ def CreateList(
                         Supported types: int, float"""
         )
 
-    print(
-        "На основе введённых чисел будет создан список.\nНажмите  Еnter, чтобы закончить ввод"
-    )
+    print("На основе введённых чисел будет создан список.")
 
     output = []
     counter = 1
     while len(output) != size:
         output.append(UserInput(f"Введите число {counter}: ", Type))
+
         counter += 1
     return output
 

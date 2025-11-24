@@ -1,0 +1,11 @@
+Manufacturer_ID;Manufacturer_Name;Legal_Address;Country;Manufacturer_Phone;E-mail;Site
+1;SoftGroup;Москва;Россия;+7-495-1234567;sales@softgroup.ru;www.softgroup.ru
+2;EduWorks;Берлин;Германия;+49-30-8889999;info@eduworks.de;www.eduworks.de
+3;VisionApps;Прага;Чехия;+420-2-45612345;contact@visionapps.cz;visionapps.cz
+4;CodePeak;Хельсинки;Финляндия;+358-9-1233211;support@codepeak.fi;codepeak.fi
+5;SafeIT;Варшава;Польша;+48-22-311111;info@safeit.pl;safeit.pl
+6;ArtMaker;Казань;Россия;+7-843-4567890;hello@artmaker.ru;artmaker.ru
+7;MarketTech;Лондон;Англия;+44-20-70122322;contact@markettech.co.uk;markettech.co.uk
+8;ITServe;Рига;Латвия;+371-6-222333;admin@itserve.lv;itserve.lv
+9;Analytica;Вильнюс;Литва;+370-5-4445555;info@analytica.lt;analytica.lt
+10;StudySoft;Калининград;Россия;+7-4012-777888;help@studysoft.ru;studysoft.ru

@@ -1,0 +1,11 @@
+App_ID;App_Name;Manufacturer_ID;App_Ver;Type_ID;Area_ID;Release_Date
+1;ExcelPro;1;2023.1;1;1;2023.06.15
+2;LearnMate;2;1.0b;5;2;2024.02.01
+3;Mediashine;3;2020;3;4;2020.10.10
+4;DevSuite;4;2.7.3;2;3;2022.11.21
+5;SafeBox;5;5.0;6;7;2021.04.30
+6;ArtStudio;6;8.5;10;8;2022.09.12
+7;GameDay;1;1.1;4;9;2024.01.15
+8;BackupEasy;3;4.0;8;7;2023.03.22
+9;SysCare;5;2.0;9;7;2022.07.10
+10;MarketGuru;7;3.5;5;5;2023.12.01

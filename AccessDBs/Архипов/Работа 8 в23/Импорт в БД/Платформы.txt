@@ -1,0 +1,11 @@
+Platform_ID;Platform_Name;Manufacturer_ID;Architecture
+1;Windows 10;1;x64
+2;Linux Mint;2;x64
+3;macOS Ventura;3;ARM
+4;Windows 11;1;x64
+5;Debian 12;2;x64
+6;Ubuntu 22;8;x64
+7;macOS Sonoma;3;ARM
+8;Windows Server 2019;1;x64
+9;Fedora 39;2;x64
+10;Kali Linux;2;x64
