@@ -20,20 +20,22 @@ except ImportError as e:
     exit()
 
 
-Matrix=np.random.randint(1, 40, (5,5))
+Matrix = np.random.randint(1, 40, (5, 5))
 
-print(f'Созданная матрица: \n{Matrix}\n')
-LowerBound = UserInput('Введите нижний предел диапозона: ',int)
-UpperBound = UserInput('Введите верхний предел диапозона: ',int)
+print(f"Созданная матрица: \n{Matrix}\n")
+LowerBound = UserInput("Введите нижний предел диапозона: ", int)
+UpperBound = UserInput("Введите верхний предел диапозона: ", int)
 
-Matrix[(Matrix > UpperBound) & (Matrix < LowerBound)] = 0
-print(f'Изменённая матрица: \n{Matrix}\n')
+Matrix[Matrix > UpperBound] = 0
+Matrix[Matrix < LowerBound] = 0
+print(f"Неподходящие значения заменены нулевыми: \n{Matrix}\n")
 
 for w in range(Matrix.shape[0]):
-    zeros = len(np.where(Matrix[w, :]==0)[0])
+    zeros = len(np.where(Matrix[w, :] == 0)[0])
     Sum = sum(Matrix[w, :])
-    Len = Matrix[w, :].shape[0]-zeros
-    if Len !=0:
-        print(f'Среднее арифметическое {w+1} строки: {Sum/Len}')
-    else:print(f'В строке {w+1} нет подходящих значений')
-input('Нажмите Enter чтобы выйти')
+    Len = Matrix[w, :].shape[0] - zeros
+    if Len != 0:
+        print(f"Среднее арифметическое {w+1} строки: {Sum/Len}")
+    else:
+        print(f"В строке {w+1} нет подходящих значений")
+input("Нажмите Enter чтобы выйти")

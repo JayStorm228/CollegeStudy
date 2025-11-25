@@ -1,4 +1,4 @@
-import math as asd
+import math as m
 
 x = None
 a = None

@@ -24,8 +24,8 @@ print(
 import random as r
 import math as m
 
-x, a = r.randint(-10, 10), r.randint(-10, 10)
-b, y = r.randint(-10, 10), r.randint(-10, 10)
+x, a = -1, -4  # r.randint(-10, 10), r.randint(-10, 10)
+b, y = -4, -4  # r.randint(-10, 10), r.randint(-10, 10)
 
 Accuracy = UserInput("Введите количество знаков после запятой: ", int)
 
