@@ -14,7 +14,7 @@ while a == None:  # Вводим ЧИСЛО а
     except ValueError:
         print("Вы ввели не число")
         a = None
-
+y = None
 if x < 1:
     y = None
 elif x > 1 and x < 2:
