@@ -10,6 +10,7 @@ Y = 3*cos(2x +1 )**2
 
 import math as m
 import numpy as np
+import pandas as pd
 
 Accuracy = None
 while Accuracy == None:
@@ -19,7 +20,7 @@ while Accuracy == None:
         Accuracy = None
         print(f"Ошибка ввода: {Accuracy} не является числом")
 
-Matrix = np.linspace(-m.pi, m.pi, int((m.pi - (-m.pi)) / (m.pi / 8)) + 1)
+X_Values = np.linspace(-m.pi, m.pi, int((m.pi - (-m.pi)) / (m.pi / 8)) + 1)
 
 
 def Y(x):
@@ -27,7 +28,14 @@ def Y(x):
 
 
 Vector = np.vectorize(Y)
-Result = np.round(Vector(Matrix), Accuracy)
-table = np.column_stack((Matrix, Result))
-print("\tx  y")
-print(table)
+Y_Values = Vector(X_Values)
+max_index = np.argmax(Y_Values)
+max_x, max_y = X_Values[max_index], Y_Values[max_index]
+RoundX, RoundY = np.around(X_Values, Accuracy), np.around(Y_Values, Accuracy)
+max_x_rounded, max_y_rounded = np.round(max_x, Accuracy), np.round(max_y, Accuracy)
+Table = pd.DataFrame({"x": RoundX, "y": RoundY})
+
+print(
+    f"""Таблица всех значений: \n{Table}\n
+Максимальное значение У: {max_y_rounded} при х = {max_x_rounded}"""
+)
