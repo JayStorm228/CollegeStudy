@@ -14,9 +14,6 @@ except ImportError as e:
     print(f"Модуль custom_assertions не найден: {e}")
     exit()
 
-
-import numpy as np
-
 Matrix = np.random.randint(1, 41, (5, 5))
 
 print(f"Созданная матрица:\n{Matrix}\n")
