@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="qQmVR3-3xRA6lp2Y9Ugk" name="Page-1">
-        <mxGraphModel dx="1053" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="720" background="#FFFFFF" math="0" shadow="0" adaptiveColors="auto">
+        <mxGraphModel dx="1053" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="720" background="#FFFFFF" math="0" shadow="0" adaptiveColors="auto">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -9,7 +9,7 @@
                         <mxRectangle x="380" y="100" width="90" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="19" value="&lt;span&gt;&lt;font style=&quot;color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&quot;&gt;ID Продукта&lt;/font&gt;&lt;/span&gt;" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontColor=default;fontStyle=0;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="17" vertex="1">
+                <mxCell id="19" value="&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;u&gt;ID Продукта&lt;/u&gt;&lt;/font&gt;&lt;/span&gt;" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontColor=light-dark(#000000,#FFFFFF);fontStyle=0;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;labelBackgroundColor=none;" parent="17" vertex="1">
                     <mxGeometry y="30" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="Название Продукта" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontColor=default;fontStyle=0;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="17" vertex="1">
@@ -18,7 +18,7 @@
                 <mxCell id="172" value="Изготовитель" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontColor=default;fontStyle=0;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="17" vertex="1">
                     <mxGeometry y="94" width="160" height="36" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="Версия" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontColor=default;fontStyle=0;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="17" vertex="1">
+                <mxCell id="33" value="Версия" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontColor=default;fontStyle=0;labelBorderColor=none;strokeColor=light-dark(default, #6e6e6e);strokeWidth=6;labelBackgroundColor=none;" parent="17" vertex="1">
                     <mxGeometry y="130" width="160" height="34" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="Тип Продукта" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;rounded=0;fontFamily=Helvetica;fontColor=default;fontStyle=0;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="17" vertex="1">
@@ -33,7 +33,7 @@
                 <mxCell id="21" value="Пользователь" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=16;verticalAlign=middle;swimlaneFillColor=light-dark(transparent,#6E6E6E);fontFamily=Helvetica;rounded=0;strokeColor=light-dark(#000000,#000000);fontColor=default;labelBorderColor=none;fillColor=default;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="1113" y="53" width="160" height="206" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="ID Пользователя" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="21" vertex="1">
+                <mxCell id="22" value="ID Пользователя" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=4;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="21" vertex="1">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="69" value="ФИО" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="21" vertex="1">
@@ -54,7 +54,7 @@
                 <mxCell id="25" value="Инсталляция" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=16;verticalAlign=middle;swimlaneFillColor=light-dark(transparent,#6E6E6E);fontFamily=Helvetica;rounded=0;strokeColor=light-dark(#000000,#000000);fontColor=default;labelBorderColor=none;fillColor=default;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="778" y="53" width="200" height="236" as="geometry"/>
                 </mxCell>
-                <mxCell id="76" value="ID Инсталляции" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="25" vertex="1">
+                <mxCell id="76" value="ID Инсталляции" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=4;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="25" vertex="1">
                     <mxGeometry y="26" width="200" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="68" value="Продукт" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="25" vertex="1">
@@ -104,7 +104,7 @@
                 <mxCell id="41" value="Тип Продукта" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=20;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=16;verticalAlign=middle;swimlaneFillColor=light-dark(transparent,#6E6E6E);fontFamily=Helvetica;rounded=0;labelBorderColor=none;strokeColor=light-dark(#000000,#000000);fontColor=default;fillColor=default;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="42" y="42" width="160" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" value="ID Типа" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="41" vertex="1">
+                <mxCell id="42" value="ID Типа" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=4;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="41" vertex="1">
                     <mxGeometry y="20" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="43" value="Название Типа" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;fillColor=none;" parent="41" vertex="1">
@@ -113,7 +113,7 @@
                 <mxCell id="45" value="Прикладная Область" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=16;verticalAlign=middle;swimlaneFillColor=light-dark(transparent,#6E6E6E);fontFamily=Helvetica;rounded=0;strokeColor=light-dark(#000000,#000000);fontColor=default;labelBorderColor=none;fillColor=default;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="42" y="146" width="160" height="86" as="geometry"/>
                 </mxCell>
-                <mxCell id="46" value="ID Области" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="45" vertex="1">
+                <mxCell id="46" value="ID Области" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=4;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="45" vertex="1">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="47" value="Название Области" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="45" vertex="1">
@@ -170,7 +170,7 @@
                 <mxCell id="85" value="Лицензия" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=16;rounded=0;verticalAlign=middle;swimlaneFillColor=light-dark(transparent,#6E6E6E);fontFamily=Helvetica;strokeColor=light-dark(#000000,#000000);fontColor=default;labelBorderColor=none;fillColor=default;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="140" y="416" width="190" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="86" value="ID Лицензии" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="85" vertex="1">
+                <mxCell id="86" value="ID Лицензии" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=4;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="85" vertex="1">
                     <mxGeometry y="26" width="190" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="87" value="Название" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="85" vertex="1">
@@ -188,7 +188,7 @@
                 <mxCell id="97" value="Платформы" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=16;verticalAlign=middle;swimlaneFillColor=light-dark(transparent,#6E6E6E);fontFamily=Helvetica;rounded=0;strokeColor=light-dark(#000000,#000000);fontColor=default;labelBorderColor=none;fillColor=default;strokeWidth=4;gradientColor=none;" parent="1" vertex="1">
                     <mxGeometry x="1070" y="300" width="203" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="98" value="ID Платформы" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="97" vertex="1">
+                <mxCell id="98" value="ID Платформы" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=4;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="97" vertex="1">
                     <mxGeometry y="26" width="203" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="99" value="Название Платформы" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="97" vertex="1">
@@ -316,7 +316,7 @@
                 <mxCell id="183" value="Изготовитель" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=16;verticalAlign=middle;swimlaneFillColor=light-dark(transparent,#6E6E6E);fontFamily=Helvetica;rounded=0;strokeColor=light-dark(#000000,#000000);fontColor=default;labelBorderColor=none;fillColor=default;strokeWidth=4;" parent="1" vertex="1">
                     <mxGeometry x="455" y="452" width="190" height="236" as="geometry"/>
                 </mxCell>
-                <mxCell id="184" value="ID Изготовителя" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="183" vertex="1">
+                <mxCell id="184" value="ID Изготовителя" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=4;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="183" vertex="1">
                     <mxGeometry y="26" width="190" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="185" value="Название Изготовителя" style="text;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontStyle=0;rounded=0;fontColor=default;labelBorderColor=none;strokeColor=light-dark(default, #0d0d0d);strokeWidth=6;" parent="183" vertex="1">

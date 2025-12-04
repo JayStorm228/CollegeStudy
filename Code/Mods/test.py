@@ -1,31 +1,18 @@
-import math as asd
-
-x = None
-a = None
-while x == None:  # Вводим ЧИСЛО х
-    try:
-        x = float(input("Введите число x: "))
-    except ValueError:
-        print("Вы ввели не число")
-        x = None
-while a == None:  # Вводим ЧИСЛО а
-    try:
-        a = float(input("Введите число x: "))
-    except ValueError:
-        print("Вы ввели не число")
-        a = None
-
-if x < 1:
-    y = None
-elif x > 1 and x < 2:
-    y = None
-elif x > 2:
-    y = None
-elif x == 1 or x == 2:
-    print(f"При данном значении х = {x} функция не задана")
 print(
-    f"""Введённые значения:
-      х = {x}
-      а = {a}
-Значение функции: {y}"""
+    """
+Эта программа вычисляет значение функции на промежутке
+F = cos(1/x) + 2 tg(x)
+промежуток: от 1 до 8 с шагом 0.5
+"""
 )
+import math
+
+start = 1
+end = 6
+step = 0.5
+
+x = start
+while x <= end:
+    y = x - math.sin(x) + 3 * math.tan(x)
+    print(f"x = {x:.1f}, y = {y:.4f}")
+    x += step
