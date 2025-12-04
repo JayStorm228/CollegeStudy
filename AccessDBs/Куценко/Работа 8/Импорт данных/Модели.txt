@@ -1,0 +1,21 @@
+ID_модели;Название;Тип_процессора;Тактовая_частота_ГГц;Объем_ОЗУ_ГБ;Объем_накопителя_ГБ
+1;SK-Office R3;AMD Ryzen 3 4100;3.8;8;256
+2;SK-Gaming R7;AMD Ryzen 7 5800X;4.7;32;1000
+3;SK-Home i5;Intel i5-12400F;4.4;16;512
+4;SK-Ultra i9;Intel i9-13900K;5.6;32;2000
+5;BK-Office i3;Intel i3-12100;4.3;8;256
+6;BK-Pro i9;Intel i9-12900K;5.2;32;1000
+7;UT-Business R5;AMD Ryzen 5 5600;4.2;16;512
+8;NV-Ultra i9;Intel i9-13900K;5.6;32;2000
+9;VP-Power i9;Intel i9-13900K;5.6;16;1000
+10;ST-Extreme i9;Intel i9-13900K;5.6;64;2000
+11;DK-Gamer i9;Intel i9-13900K;5.6;32;1000
+12;PV-Office i9;Intel i9-13900K;5.6;16;512
+13;SK-Office R3 Plus;AMD Ryzen 3 4100;3.8;8;512
+14;SK-Gaming R7 Pro;AMD Ryzen 7 5800X;4.7;32;2000
+15;UT-Business R5 Plus;AMD Ryzen 5 5600;4.2;32;1000
+16;SK-Gaming R9;AMD Ryzen 9 5900X;4.8;32;1000
+17;SK-Workstation R9;AMD Ryzen 9 5950X;4.9;64;2000
+18;UT-Office R9;AMD Ryzen 9 5900;4.6;16;512
+19;NV-Ultra R9;AMD Ryzen 9 7900X;5.0;32;1000
+20;BK-Pro R9;AMD Ryzen 9 7900;4.7;32;1000
