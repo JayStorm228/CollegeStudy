@@ -25,16 +25,21 @@ while Accuracy == None:
     except ValueError:
         Accuracy = None
         print(f"Ошибка ввода: {Accuracy} не является числом")
-def ControlValuesCheck() -> bool: 
-    Check = input('Проверить контрольные значения? [Y/N]')
-    if Check == 'Y':
+
+
+def ControlValuesCheck() -> bool:
+    Check = input("Проверить контрольные значения? [Y/N] ")
+    if Check.capitalize() == "Y":
         return True
-    elif Check = 'N':
+    elif Check.capitalize() == "N":
         return False
-    else: exit('Ошибочное значение. Запустите программу ещё раз.')
+    else:
+        exit("Ошибочное значение. Запустите программу ещё раз.")
+
+
 if ControlValuesCheck():
     a, Xn, Xk, dx = 5.27, 1, 10, 1
-else: 
+else:
     a = r.uniform(0.5, 10)
     Xn = r.uniform(0, 10)
     Xk = r.uniform(0, 10)
