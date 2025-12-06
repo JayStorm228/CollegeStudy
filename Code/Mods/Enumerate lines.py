@@ -1,21 +1,26 @@
-Code = '''print("""Эта программа находит значение кусочно-заданной функции:
-    y = pi * (x**2) - (7 / (x**2)) # x < 1,3
-    y = a * (x**3) + 7 * (x ** (1 / 2)) # x = 1,3
-    y = ln(x + 7 * (x ** (1 / 2))) # x > 1,3""")
+Code = '''print("""Получите таблицу значений для функции:
+    | x**(1/3); x>6
+Y = | 2*sin(x); x<5
+    | (x+1)**(1/2); 5 <= x <= 6
+Отрезок: [2, 12], шаг 0.5""")
 import math as m
-from custom_assertions import UserInput
-
-constant = UserInput("Введите значение а: ", float)
-x = UserInput("Введите значение х: ", float)
-if x < 1.3:
-    Fx = m.pi * (x**2) - (7 / (x**2))
-    print(f"f(x) = {Fx}")
-elif x == 1.3:
-    Fx = constant * (x**3) + 7 * (x ** (1 / 2))
-    print(f"f(x) = {Fx}")
-elif x > 1.3:
-    Fx = m.log(x + 7 * (x ** (1 / 2)))
-    print(f"f(x) = {Fx}")'''
+Start = 2
+Stop = 12
+step = 0.5
+x = Start
+Accuracy = None
+while Accuracy == None:
+    try: Accuracy = int(input("Введите точность вычислений:"))
+    except ValueError:
+        Accuracy = None
+        print(f"Ошибка ввода: {Accuracy} не является числом")
+while x <= Stop:
+    if x > 6: Y = x ** (1 / 3)
+    elif x < 5: Y = 2 * m.sin(x)
+    elif 5 <= x <= 6: Y = (x + 1) ** (1 / 2)
+    print(f"x: {x}, y: {round(Y, Accuracy)}")
+    x += step
+'''
 lines = Code.strip("\n").split("\n")
 for i, line in enumerate(lines, start=1):
     print(f"{i:>3}: {line}")
