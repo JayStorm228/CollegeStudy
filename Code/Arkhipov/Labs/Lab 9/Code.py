@@ -10,7 +10,6 @@ print(
     """
 )
 import numpy as np
-import pandas as pd
 
 Accuracy = None
 while Accuracy == None:
@@ -21,15 +20,21 @@ while Accuracy == None:
         print(f"Ошибка ввода: {Accuracy} не является числом")
 
 Matrix = -5 + 10 * np.random.random((10, 10))
+
+# Для контекстной обработки округления:
+# таким образом, мы выведем на экран матрицу с округлёнными значениями
+# но исходная матрица останется не тронутой
 with np.printoptions(precision=Accuracy, suppress=True):
     print(f"Созданная матрица значений: \n{Matrix}\n")
+
 Matrix[Matrix > 0] = 1
 Matrix[Matrix < 0] = 0
 output = np.tril(Matrix)
 print(f"Ответ: \n{output}\n")
 
-# для сохранения
+# для сохранения, не влияет на выполнение задания
 import os
+import pandas as pd
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(script_dir, "Answer.csv")
@@ -37,4 +42,11 @@ pd.DataFrame(
     output,
     columns=[f"Col {i}" for i in range(output.shape[1])],
     index=[f"Row {i}" for i in range(output.shape[0])],
-).to_csv(csv_path, index=True)
+).to_csv(csv_path, index=True, encoding="utf-8", sep=";")
+
+csv_path = os.path.join(script_dir, "Matrix.csv")
+pd.DataFrame(
+    Matrix,
+    columns=[f"Col {i}" for i in range(Matrix.shape[1])],
+    index=[f"Row {i}" for i in range(Matrix.shape[0])],
+).to_csv(csv_path, index=True, encoding="utf-8", sep=";")
