@@ -9,23 +9,27 @@ x, x^2/2!, x^3/3!, x^n/n!
 import math as m
 import pandas as pd
 
-N_Value = 1
-X_Value = 0.2
-
 
 def Function(X, N):
-    global N_Value
     return X**N / m.factorial(N)
 
 
+N_Value = 1
+X_Value = 0.2
 Critical = 0.001
-Func_Value = []
+F_Values = []
 N_Values = []
 
 while Function(X_Value, N_Value) > Critical:
-    Func_Value.append(Function(X_Value, N_Value))
+    F_Values.append(Function(X_Value, N_Value))
     N_Values.append(N_Value)
     N_Value += 1
 
-Table = pd.DataFrame({"N": N_Values, "Значение последовательности": Func_Value})
+Table = pd.DataFrame({"N": N_Values, "Значение последовательности": F_Values})
 print(Table)
+# Сугубо для удобства сохранения
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(script_dir, "Answer.csv")
+Table.to_csv(csv_path, encoding="utf-8")

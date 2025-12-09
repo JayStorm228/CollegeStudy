@@ -15,11 +15,9 @@ MaxLenWord = StrList[MaxLenIDX]
 MaxLenCount = LenList.count(MaxLen)
 
 print(
-    f"""
-Исходная строка: {String}
+    f"""Исходная строка: {String}
 Самое длинное слово: {MaxLenWord}
 Его длинна: {MaxLen}
-Количество слов с такой же длинной: {MaxLenCount}
-"""
+Количество слов с такой же длинной: {MaxLenCount}"""
 )
 input("\nНажмите ENTER, чтобы выйти.")
