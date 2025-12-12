@@ -34,9 +34,16 @@ max_x, max_y = X_Values[Max_Idx], Y_Values[Max_Idx]
 RoundX, RoundY = np.around(X_Values, Accuracy), np.around(Y_Values, Accuracy)
 max_x_rounded, max_y_rounded = np.round(max_x, Accuracy), np.round(max_y, Accuracy)
 Table = pd.DataFrame({"x": RoundX, "y": RoundY})
-
-print(
-    f"""Таблица всех значений: \n{Table}\n
-Максимальное значение У: {max_y_rounded} 
-при х = {max_x_rounded}"""
+max_row = pd.DataFrame(
+    {"x": [max_x_rounded], "y": [max_y_rounded]}, index=["Макс Значения"]
 )
+Table = pd.concat([Table, max_row])
+print(Table)
+
+# для сохранения
+import os
+
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(script_dir, "Answer.csv")
+Table.to_csv(csv_path, index=True, encoding="utf-8", sep=";")
