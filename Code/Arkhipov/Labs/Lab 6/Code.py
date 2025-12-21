@@ -12,9 +12,7 @@ print(
         """
 )
 
-import math as m
-import numpy as np
-import pandas as pd
+import math as m, numpy as np, pandas as pd
 
 Accuracy = None
 while Accuracy == None:

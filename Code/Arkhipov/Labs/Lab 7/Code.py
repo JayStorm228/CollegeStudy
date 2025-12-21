@@ -11,7 +11,7 @@ import pandas as pd
 
 
 def Function(X, N):
-    return X**N / m.factorial(N)
+    return round(X**N / m.factorial(N), 5)
 
 
 N_Value = 1
@@ -32,4 +32,4 @@ import os
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(script_dir, "Answer.csv")
-Table.to_csv(csv_path, encoding="utf-8")
+Table.to_csv(csv_path, encoding="utf-8", sep=";")
