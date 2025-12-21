@@ -18,8 +18,10 @@ for n in range(max_iter):
         break
     x_new = x - fx / dfx
     if abs(x_new - x) < eps:
-        print(f"Корень: {x_new:.6f}")
-        print(f"F(x) = {F(x_new)}")
+        print(
+            f"""Корень: {x_new:.6f}
+F(x) = {F(x_new)}"""
+        )
         break
     x = x_new
 else:
