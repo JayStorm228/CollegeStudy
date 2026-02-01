@@ -1,0 +1,13 @@
+subscriber_id;last_name;address;note
+1;Ivanov;Street 1;
+2;Petrov;Street 2;
+3;Sidorov;Street 3;
+4;Smirnov;Street 4;
+5;Kuznetsov;Street 5;
+6;Popov;Street 6;
+7;Sokolov;Street 7;
+8;Mikhailov;Street 8;
+9;Fedorov;Street 9;
+10;Morozov;Street 10;
+11;Volkov;Street 11;
+12;Alekseev;Street 12;

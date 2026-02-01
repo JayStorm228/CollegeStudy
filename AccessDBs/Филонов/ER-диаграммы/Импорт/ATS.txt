@@ -1,0 +1,5 @@
+ats_id;ats_code;district_code;total_capacity
+1;47;A;1000
+2;47;B;1000
+3;51;A;1000
+4;52;B;1000
