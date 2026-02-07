@@ -1,6 +1,8 @@
 import math as m
+import random as r
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
+from typing import Callable
 
 
 class Figure(ABC):
@@ -77,10 +79,11 @@ class Circle(Figure):
     def radius(self, value) -> None:
         if value <= 0:
             raise ValueError("Radius cannot be negative!")
+        self._radius = value
 
     @property
     def area(self) -> float:
-        return m.pi**2 * self.radius
+        return m.pi * self.radius**2
 
     @property
     def perimeter(self) -> float:
@@ -109,14 +112,10 @@ class Triangle(Figure):
     @sides.setter
     def sides(self, value: tuple[float, float, float]):
         if len(value) != 3 or any(s <= 0 for s in value):
-            raise ValueError(
-                f"Ошибка: {value} - должно быть три стороны, каждая из них больше нуля"
-            )
+            raise ValueError(f"Invalid sides: {value} — each side must be > 0")
         a, b, c = sorted(value)
         if a + b <= c:
-            raise ValueError(
-                f"Ошибка: {value} — не существует треугольник " f"(a+b={a+b} ≤ c={c})"
-            )
+            raise ValueError(f"Invalid triangle: {value} (a+b={a+b} <= c={c})")
         self._sides = value
 
     @property
@@ -138,10 +137,33 @@ Perimeter: {self.perimeter}
         """.strip()
 
 
-triangle = Triangle((1, 2, 3))
-rectangle = Rect(10, 5)
-circle = Circle(5)
-Figures = [triangle, rectangle, circle]
+def random_triangle() -> Triangle:
+    while True:
+        sides: tuple[int, int, int] = (
+            r.randint(1, 50),
+            r.randint(1, 50),
+            r.randint(1, 50),
+        )
+        try:
+            return Triangle(sides)
+        except ValueError:
+            continue
 
-for w in Figures:
-    print(str(w))
+
+def main() -> None:
+    FigureFactors: dict[int, Callable[[], Figure]] = {
+        1: lambda: Circle(r.randint(1, 10)),  # radius = random
+        2: lambda: Rect(r.randint(1, 10), r.randint(1, 10)),
+        3: lambda: random_triangle(),
+    }
+    FiguresAmount: int = r.randint(1, 10)
+    print(f"Initializing {FiguresAmount} figures of {len(FigureFactors)} types")
+    FiguresList: list[Figure] = [
+        FigureFactors[r.randint(1, len(FigureFactors))]() for _ in range(FiguresAmount)
+    ]
+    for w in FiguresList:
+        print(str(w), end="\n\n")
+
+
+if __name__ == "__main__":
+    main()
