@@ -6,4 +6,4 @@ N = 50
 A: list[int] = [randint(0, 10) for _ in range(N)]
 Value = 3
 Count: int = F.count_greater_than(A, Value)
-print(f"N = {N}, A = {A}\n Count > {Value} = {Count}")
+print(f"{N=}, {A=}\n Count > {Value} = {Count}")
