@@ -162,7 +162,7 @@ def main() -> None:
         FigureFactors[r.randint(1, len(FigureFactors))]() for _ in range(FiguresAmount)
     ]
     for w in FiguresList:
-        print(str(w), end="\n\n")
+        print(w, end="\n\n")
 
 
 if __name__ == "__main__":

@@ -192,8 +192,9 @@ def main() -> None:
         if software.match_InstallDate(SearchedInstallDate)
     ]
     print(f"Found: {len(output)}")
-    for w in output:
-        print(w, end="\n\n")
+    if output:
+        for w in output:
+            print(w, end="\n\n")
 
 
 if __name__ == "__main__":

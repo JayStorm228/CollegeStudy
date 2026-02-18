@@ -80,7 +80,7 @@ Given: x={X_slice}, y={Y_slice}
         # Формула: index = x * cols + y
         x: NDArray[int64] = unique_flat // cols
         y: NDArray[int64] = unique_flat % cols
-        self.AvailableCoordinates = list(zip(x, y))
+        self.AvailableCoordinates = list(zip(x, y, strict=True))
 
     def __len__(self) -> int:
         return self.Size[0] * self.Size[1]

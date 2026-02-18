@@ -172,8 +172,9 @@ def main() -> None:
     ]
     output: list[Item] = [item for item in ItemsList if item.can_buy(SearchedCost)]
     print(f"Found: {len(output)}")
-    for w in output:
-        print(w, end="\n\n")
+    if output:
+        for w in output:
+            print(w, end="\n\n")
 
 
 if __name__ == "__main__":

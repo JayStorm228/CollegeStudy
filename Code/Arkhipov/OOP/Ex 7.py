@@ -122,8 +122,9 @@ def main() -> None:
         phone for phone in PhonesList if phone.matches_Name(SearchedName)
     ]
     print(f"Found: {len(output)}")
-    for w in output:
-        print(w, end="\n\n")
+    if output:
+        for w in output:
+            print(w, end="\n\n")
 
 
 if __name__ == "__main__":

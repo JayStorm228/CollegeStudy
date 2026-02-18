@@ -94,8 +94,9 @@ def main() -> None:
         edition for edition in EditionsList if edition.match_surname(SearchedSurname)
     ]
     print(f"Found: {len(output)}")
-    for w in output:
-        print(w, end="\n\n")
+    if output:
+        for w in output:
+            print(w, end="\n\n")
 
 
 if __name__ == "__main__":

@@ -125,8 +125,9 @@ def main() -> None:
         vehicle for vehicle in VehicleList if vehicle.match_carrying(SearchedCarrying)
     ]
     print(f"Found: {len(output)}")
-    for w in output:
-        print(w, end="\n\n")
+    if output:
+        for w in output:
+            print(w, end="\n\n")
 
 
 if __name__ == "__main__":
